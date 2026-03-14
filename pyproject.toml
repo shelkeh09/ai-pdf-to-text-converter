@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-pdf-to-text-converter"
+version = "0.1.0"
+description = "Convert PDF files into lightweight searchable text documents"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pypdf>=6.8.0,<7.0.0",
+]
+
+[project.scripts]
+pdf-to-text = "pdf_to_txt_converter.cli:main"
+
+[tool.setuptools]
+packages = ["pdf_to_txt_converter"]
